@@ -3,3 +3,4 @@ outputs/
 dist/
 logs/
 files/
+coverage/

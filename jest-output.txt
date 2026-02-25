@@ -1,0 +1,48 @@
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[config] (WARN) [94mmessage[0m[90m TS151001: [0mIf you have issues related to imports, you should consider setting `esModuleInterop` to `true` in your TypeScript configuration file (usually `tsconfig.json`). See https://blogs.msdn.microsoft.com/typescript/2018/01/31/announcing-typescript-2-7/#easier-ecmascript-module-interoperability for more information.
+  console.log
+    file created!
+
+      at SaveFile.execute (src/domain/use-cases/save-file.use-case.ts:26:21)
+
+  console.log
+    file created!
+
+      at SaveFile.execute (src/domain/use-cases/save-file.use-case.ts:26:21)
+
+(node:7540) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL src/domain/use-cases/save-file.use-case.test.ts
+  SaveFileUseCase
+    × should save file with default values (25 ms)
+    √ should save file with custom values (5 ms)
+
+  ● SaveFileUseCase › should save file with default values
+
+    ENOENT: no such file or directory, open 'C:\Users\emilm\Documents\CURSOS DEV TALLERES\node js\05-multiplication\outputs\table.txt'
+
+    [0m [90m 26 |[39m         [36mconst[39m result [33m=[39m saveFile[33m.[39mexecute(defaultOptions)[33m;[39m
+     [90m 27 |[39m         [36mconst[39m fileExist [33m=[39m fs[33m.[39mexistsSync(filePath)[33m;[39m
+    [31m[1m>[22m[39m[90m 28 |[39m         [36mconst[39m fileContent [33m=[39m fs[33m.[39mreadFileSync(filePath[33m,[39m { encoding[33m:[39m [32m'utf-8'[39m })[33m;[39m
+     [90m    |[39m                                [31m[1m^[22m[39m
+     [90m 29 |[39m
+     [90m 30 |[39m         expect(result)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 31 |[39m         expect(fileExist)[33m.[39mtoBe([36mtrue[39m)[33m;[39m[0m
+
+      at Object.<anonymous> (src/domain/use-cases/save-file.use-case.test.ts:28:32)
+
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |   91.17 |    66.66 |     100 |   91.17 |                   
+ save-file.use-case.ts |   91.17 |    66.66 |     100 |   91.17 | 29-31             
+-----------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        4.014 s
+Ran all test suites matching src/domain/use-cases/save-file.use-case.test.ts.
