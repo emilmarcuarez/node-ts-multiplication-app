@@ -1,6 +1,7 @@
 {
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ],
   "include": [
     "src/**/*"
@@ -16,7 +17,8 @@
     "moduleResolution": "node",
     "target": "esnext",
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     // For nodejs:
     // "lib": ["esnext"],
@@ -24,8 +26,6 @@
     // and npm install -D @types/node
     // Other Outputs
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
